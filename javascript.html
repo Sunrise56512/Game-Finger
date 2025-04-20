@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="JavaScript" href="JavaScript.js">
+    <title>JavaScript</title>
+</head>
+<body>
+    <p class="p">Сколько пальцев я показываю? 0 из 10</p>
+    <p><input type="text" id="input"></p>
+    <p><button type="submit" id="Submit">Подтвердить</button></p>
+</body>
+<script>
+    document.getElementById("Submit").onclick = function() {
+        var fingersGame = Math.random();
+        fingersGame = fingersGame * 11;
+        fingersGame = Math.floor(fingersGame);
+        if (document.getElementById("input").value == fingersGame) {
+            alert("ОГО ТЫ ПРОСТО СУПЕР НЕ ОЖИДАЛ!")
+        } else {
+            alert("ТЫ НЕ УГАДАЛ ХА-ХА-ХА ЧИСЛО БЫЛО " + fingersGame);
+        }
+    }
+</script>
+</html>
